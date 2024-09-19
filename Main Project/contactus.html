@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- <?php
+    if (isset($_POST["submit"])) {
+      $username = $_POST["username"];
+      $email = $_POST["email"];
+      $phone = $_POST["phone"];
+      $message = $_POST["message"];
+
+      require_once "database.php";
+      $sql = "SELECT * FROM contact WHERE email= '$email'";
+      $result = mysqli_query($conn, $sql);
+      $rowCount = mysqli_num_rows($result);
+
+      
+        $sql = "INSERT INTO contact (username, email, phone, message) VALUES (?, ?, ?, ?)";
+        $stmt = mysqli_stmt_init($conn);
+        if (mysqli_stmt_prepare($stmt, $sql)) {
+          mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $phone, $message);
+          mysqli_stmt_execute($stmt);
+          echo"<script>alert('Response Submitted!')</script>";
+        } else {
+          die("Something went wrong");
+        }
+    }
+    ?>   -->
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contactus.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  
+  </head>
+  <body>
+    
+    <div class="container">
+    <nav>
+                
+			<img src="Color-removebg-preview.png"class="logo" >
+			<ul>
+				<li><a href="firstpage.html">Home</a></li>
+				<li><a href="contactus.html">Contact</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="ourteam.html">Our team</a></li>
+				
+			</ul>
+		</nav>
+   
+      <div class="form">
+        <div class="contact-info">
+  
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            We're here to assist you!Reach out with any questions,feedback or inquiries. Our dedicated team is ready 
+            to make your experience exceptional.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="location.png" class="icon" alt="" />
+              <p>Maharashtra,India</p>
+            </div>
+            <div class="information">
+              <img src="email.png" class="icon" alt="" />
+              <p>colorscope2024@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="phone.png" class="icon" alt="" />
+              <p>1234567890</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="#" method="post" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" placeholder="Username" class="input" name="username" required />
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" placeholder="Email" class="input" name="email" required/>
+              
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" placeholder="Phone" class="input" name="phone" required/>
+             
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea placeholder="message" class="input" name="message" required></textarea>
+             
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" name="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
